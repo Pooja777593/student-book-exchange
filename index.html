@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Student Book Exchange - Buy, sell and exchange academic books at affordable prices."
+    >
+
+    <title>Student Book Exchange</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link
+        href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap)"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome icons -->
+    <link
+        rel="stylesheet"
+        href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css)"
+    >
+
+    <!-- Project stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header and navigation -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-book-open"></i>
+                <span>Student Book Exchange</span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#buy-books">Buy Books</a></li>
+                <li><a href="#sell-books">Sell Books</a></li>
+                <li><a href="#exchange-books">Exchange Books</a></li>
+
+                <li>
+                    <a href="#cart" class="cart-link">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Shopping Cart
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Homepage -->
+        <section class="hero" id="home">
+            <div class="hero-shape hero-shape-one"></div>
+            <div class="hero-shape hero-shape-two"></div>
+
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="section-label">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        A marketplace made for students
+                    </p>
+
+                    <h1>
+                        Student <span>Book Exchange</span>
+                    </h1>
+
+                    <p class="hero-tagline">
+                        Buy, Sell and Exchange Books at Affordable Prices!
+                    </p>
+
+                    <p class="hero-description">
+                        Find useful academic books, give your old books a new
+                        home and connect with other students in one simple place.
+                    </p>
+
+                    <form class="hero-search" id="heroSearchForm">
+                        <label class="sr-only" for="heroSearchInput">
+                            Search by book name or author
+                        </label>
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="heroSearchInput"
+                            placeholder="Search by book name or author..."
+                            autocomplete="off"
+                        >
+
+                        <button type="submit" class="primary-button">
+                            Search
+                        </button>
+                    </form>
+
+                    <div class="hero-actions">
+                        <a href="#buy-books" class="primary-button">
+                            Explore Books
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="#sell-books" class="secondary-button">
+                            Sell a Book
+                        </a>
+                    </div>
+
+                    <div class="hero-features">
+                        <span>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Affordable prices
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-check"></i>
+                            New and used books
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Easy exchange
+                        </span>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-book-card book-card-back">
+                        <div class="mini-book-cover blue-cover">
+                            <i class="fa-brands fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-book-card book-card-front">
+                        <div class="mini-book-cover orange-cover">
+                            <i class="fa-brands fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge top-badge">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        Save More
+                    </div>
+
+                    <div class="floating-badge bottom-badge">
+                        <i class="fa-solid fa-recycle"></i>
+                        Reuse Books
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section categories-section">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Browse your way</p>
+                        <h2>New and Used Book Categories</h2>
+                    </div>
+
+                    <p>
+                        Choose affordable used books or explore books in
+                        excellent new condition.
+                    </p>
+                </div>
+
+                <div class="category-grid">
+                    <button
+                        class="category-card category-card-new"
+                        type="button"
+                        data-filter="New"
+                    >
+                        <span class="category-icon">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </span>
+
+                        <span>
+                            <strong>New Books</strong>
+                            <small>Latest books in excellent condition</small>
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                        class="category-card category-card-used"
+                        type="button"
+                        data-filter="Used"
+                    >
+                        <span class="category-icon">
+                            <i class="fa-solid fa-recycle"></i>
+                        </span>
+
+                        <span>
+                            <strong>Used Books</strong>
+                            <small>Pre-loved books at student prices</small>
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <button
+                        class="category-card category-card-all"
+                        type="button"
+                        data-filter="All"
+                    >
+                        <span class="category-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </span>
+
+                        <span>
+                            <strong>All Books</strong>
+                            <small>Browse the complete collection</small>
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buy books -->
+        <section class="section books-section" id="buy-books">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Featured collection</p>
+                        <h2>Buy Books</h2>
+                    </div>
+
+                    <p>
+                        Search the collection and add multiple books to one
+                        shopping cart.
+                    </p>
+                </div>
+
+                <div class="books-toolbar">
+                    <div class="book-search-box">
+                        <label class="sr-only" for="bookSearchInput">
+                            Search books
+                        </label>
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="bookSearchInput"
+                            placeholder="Search by book or author..."
+                            autocomplete="off"
+                        >
+                    </div>
+
+                    <div class="filter-buttons" aria-label="Filter books">
+                        <button
+                            class="filter-button active"
+                            type="button"
+                            data-filter="All"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            type="button"
+                            data-filter="New"
+                        >
+                            New
+                        </button>
+
+                        <button
+                            class="filter-button"
+                            type="button"
+                            data-filter="Used"
+                        >
+                            Used
+                        </button>
+                    </div>
+                </div>
+
+                <!-- JavaScript inserts book cards here -->
+                <div class="book-grid" id="bookGrid"></div>
+
+                <p class="empty-message hidden" id="noBooksMessage">
+                    No books matched your search. Try another book or author.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sell books -->
+        <section class="section form-section" id="sell-books">
+            <div class="container split-layout">
+                <div class="form-introduction">
+                    <p class="section-label">Give books a second life</p>
+                    <h2>Sell Your Used Books</h2>
+
+                    <p>
+                        Submit the details of a book you want to sell. After a
+                        successful submission, it will appear in the available
+                        books section.
+                    </p>
+
+                    <div class="information-card">
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                        <div>
+                            <h3>Seller tip</h3>
+                            <p>
+                                Add a clear image and choose the correct
+                                condition to help students understand your
+                                listing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="project-form" id="sellBookForm">
+                    <h3>Book Details</h3>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="sellerName">Seller Name</label>
+                            <input
+                                type="text"
+                                id="sellerName"
+                                name="sellerName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sellBookName">Book Name</label>
+                            <input
+                                type="text"
+                                id="sellBookName"
+                                name="bookName"
+                                placeholder="Enter the book name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sellAuthorName">Author Name</label>
+                            <input
+                                type="text"
+                                id="sellAuthorName"
+                                name="authorName"
+                                placeholder="Enter the author name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookCondition">Book Condition</label>
+                            <select
+                                id="bookCondition"
+                                name="condition"
+                                required
+                            >
+                                <option value="">Select condition</option>
+                                <option value="Like New">Like New</option>
+                                <option value="Good">Good</option>
+                                <option value="Fair">Fair</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sellingPrice">Selling Price (INR)</label>
+                            <input
+                                type="number"
+                                id="sellingPrice"
+                                name="price"
+                                placeholder="Example: 350"
+                                min="1"
+                                step="1"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sellerContact">Contact Number</label>
+                            <input
+                                type="tel"
+                                id="sellerContact"
+                                name="contact"
+                                placeholder="10-digit mobile number"
+                                pattern="[0-9]{10}"
+                                maxlength="10"
+                                inputmode="numeric"
+                                title="Enter exactly 10 digits"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="bookImage">Upload Book Image</label>
+                            <input
+                                type="file"
+                                id="bookImage"
+                                name="bookImage"
+                                accept="image/*"
+                                required
+                            >
+
+                            <small>
+                                Choose a JPG, PNG or other image file smaller
+                                than 1 MB.
+                            </small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="primary-button full-button">
+                        <i class="fa-solid fa-upload"></i>
+                        Submit Book
+                    </button>
+
+                    <div
+                        class="form-message"
+                        id="sellFormMessage"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Exchange books -->
+        <section class="section exchange-section" id="exchange-books">
+            <div class="container split-layout">
+                <form class="project-form" id="exchangeForm">
+                    <h3>Exchange Request</h3>
+
+                    <div class="form-group">
+                        <label for="studentName">Student Name</label>
+                        <input
+                            type="text"
+                            id="studentName"
+                            name="studentName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="offeredBook">
+                            Book You Want to Exchange
+                        </label>
+
+                        <input
+                            type="text"
+                            id="offeredBook"
+                            name="offeredBook"
+                            placeholder="Example: Engineering Mathematics"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="requestedBook">Book You Want in Return</label>
+
+                        <input
+                            type="text"
+                            id="requestedBook"
+                            name="requestedBook"
+                            placeholder="Example: Data Structures"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exchangeContact">Contact Details</label>
+
+                        <input
+                            type="text"
+                            id="exchangeContact"
+                            name="contact"
+                            placeholder="Mobile number or email address"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="primary-button full-button">
+                        <i class="fa-solid fa-right-left"></i>
+                        Submit Exchange Request
+                    </button>
+
+                    <div
+                        class="form-message"
+                        id="exchangeFormMessage"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+                </form>
+
+                <div class="form-introduction">
+                    <p class="section-label">Swap and save</p>
+                    <h2>Exchange Books with Students</h2>
+
+                    <p>
+                        Tell us which book you have and which book you need.
+                        This demonstration form validates your details and
+                        confirms the request immediately.
+                    </p>
+
+                    <div class="exchange-steps">
+                        <div>
+                            <span>1</span>
+                            <p><strong>List</strong> the book you already own.</p>
+                        </div>
+
+                        <div>
+                            <span>2</span>
+                            <p><strong>Request</strong> the book you need.</p>
+                        </div>
+
+                        <div>
+                            <span>3</span>
+                            <p><strong>Connect</strong> using contact details.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shopping cart -->
+        <section class="section cart-section" id="cart">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Your selected books</p>
+                        <h2>Shopping Cart</h2>
+                    </div>
+
+                    <p>
+                        Increase quantities, decrease quantities or remove
+                        books. The total updates instantly.
+                    </p>
+                </div>
+
+                <div class="cart-layout">
+                    <div class="cart-list" id="cartItems">
+                        <!-- JavaScript inserts cart items here -->
+                    </div>
+
+                    <aside class="cart-summary">
+                        <h3>Order Summary</h3>
+
+                        <div class="summary-row">
+                            <span>Total Items</span>
+                            <strong id="summaryItemCount">0</strong>
+                        </div>
+
+                        <div class="summary-row total-row">
+                            <span>Total Price</span>
+                            <strong id="cartTotal">₹0</strong>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="primary-button full-button"
+                            id="checkoutButton"
+                        >
+                            <i class="fa-solid fa-lock"></i>
+                            Proceed to Checkout
+                        </button>
+
+                        <button
+                            type="button"
+                            class="clear-cart-button"
+                            id="clearCartButton"
+                        >
+                            Clear Cart
+                        </button>
+
+                        <div
+                            class="form-message"
+                            id="checkoutMessage"
+                            role="status"
+                            aria-live="polite"
+                        ></div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section about-section" id="about">
+            <div class="container about-layout">
+                <div>
+                    <p class="section-label">About this project</p>
+                    <h2>Affordable Academic Books for Every Student</h2>
+
+                    <p>
+                        Student Book Exchange is a college mini-project that
+                        helps students buy, sell and exchange academic books at
+                        affordable prices. It encourages students to reuse
+                        useful books instead of leaving them unused.
+                    </p>
+
+                    <p>
+                        The project brings buying, selling, searching and
+                        exchanging together in one beginner-friendly frontend
+                        website.
+                    </p>
+                </div>
+
+                <div class="about-card-grid">
+                    <article>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <h3>Buy</h3>
+                        <p>Add affordable books to one common cart.</p>
+                    </article>
+
+                    <article>
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <h3>Sell</h3>
+                        <p>Publish used books for other students.</p>
+                    </article>
+
+                    <article>
+                        <i class="fa-solid fa-right-left"></i>
+                        <h3>Exchange</h3>
+                        <p>Request a book swap with another student.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-heading centered-heading">
+                    <div>
+                        <p class="section-label">Get in touch</p>
+                        <h2>Contact Us</h2>
+                    </div>
+
+                    <p>
+                        Have a question or suggestion? Send a message using the
+                        form below.
+                    </p>
+                </div>
+
+                <div class="contact-layout">
+                    <div class="contact-details">
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <span>
+                                <strong>Email</strong>
+                                studentbooks@example.com
+                            </span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+
+                            <span>
+                                <strong>Phone</strong>
+                                +91 98765 43210
+                            </span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span>
+                                <strong>Location</strong>
+                                College Campus, India
+                            </span>
+                        </div>
+                    </div>
+
+                    <form class="project-form" id="contactForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="contactName">Your Name</label>
+
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address</label>
+
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="contactMessage">Message</label>
+
+                                <textarea
+                                    id="contactMessage"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="Write your message"
+                                    required
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="primary-button">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Send Message
+                        </button>
+
+                        <div
+                            class="form-message"
+                            id="contactFormMessage"
+                            role="status"
+                            aria-live="polite"
+                        ></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="logo footer-logo">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Student Book Exchange</span>
+                </a>
+
+                <p>
+                    Helping students save money, reuse books and learn together.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#buy-books">Buy Books</a>
+                <a href="#sell-books">Sell Books</a>
+                <a href="#exchange-books">Exchange Books</a>
+                <a href="#cart">Shopping Cart</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Project</h3>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#home">Back to Top</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="currentYear"></span> Student Book Exchange.
+                College Mini-Project.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Small notification displayed by JavaScript -->
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+    <!-- Project JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
